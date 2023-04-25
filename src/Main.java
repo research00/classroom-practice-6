@@ -10,10 +10,13 @@ public class Main {
         Scanner consoleInput = new Scanner(System.in);
         int input = -1;
         while (input != 3) {
-            System.out.println("1. Add a member\n2. Remove a member\n3. Quit");
+            System.out.println("Select 1)add 2)remove 3)quit");
             while (true) {
                 try {
                     input = consoleInput.nextInt();
+                    if(input == 3) {
+                        System.out.println("Bye!");
+                    }
                 } catch (Exception e) {
                     System.out.println("Invalid input, try again.");
                     consoleInput.next();
@@ -55,7 +58,7 @@ public class Main {
             break;
         }
         memberList.put(ID, new Member(ID, name, age));
-        System.out.println("Member added successfully");
+        System.out.println(ID + " added successfully");
     }
 
     public static void removeMember(HashMap memberList, Scanner consoleInput) {
@@ -72,13 +75,15 @@ public class Main {
             break;
         }
         memberList.remove(ID);
-        System.out.println("Member removed successfully");
+        System.out.println(ID + " removed successfully");
     }
 
     public static void printUserList(HashMap memberList) {
+        System.out.println("Current members:");
         for (Object i : memberList.values()) {
             System.out.println(i);
         }
+        System.out.println("----end of the list----");
 
     }
 }
