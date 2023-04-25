@@ -10,7 +10,7 @@ public class Main {
         Scanner consoleInput = new Scanner(System.in);
         int input = -1;
         while (input != 3) {
-            System.out.println("Select 1)add 2)remove 3)quit");
+            System.out.println("Menu: \n1) Add \n2) Remove \n3) Quit");
             while (true) {
                 try {
                     input = consoleInput.nextInt();
@@ -79,7 +79,7 @@ public class Main {
     }
 
     public static void printUserList(HashMap memberList) {
-        System.out.println("Current members:");
+        System.out.println("\nCurrent members:");
         for (Object i : memberList.values()) {
             System.out.println(i);
         }
