@@ -1,12 +1,12 @@
+// Viktor Matthew Schultz
+// Student ID: 202853271
+
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         HashMap<String, Member> memberList = new HashMap<String, Member>();
-        String name;
-        int age;
         Scanner consoleInput = new Scanner(System.in);
         int input = -1;
         while (input != 3) {
@@ -21,6 +21,7 @@ public class Main {
                 }
                 break;
             }
+
             if (input == 1) {
                 addMember(memberList, consoleInput);
                 printUserList(memberList);
@@ -31,8 +32,8 @@ public class Main {
                 System.out.println();
             }
         }
-
     }
+
     public static void addMember(HashMap memberList, Scanner consoleInput) {
         String name;
         int age;
@@ -54,7 +55,7 @@ public class Main {
             break;
         }
         memberList.put(ID, new Member(ID, name, age));
-        System.out.println("Member added successfully\n");
+        System.out.println("Member added successfully");
     }
 
     public static void removeMember(HashMap memberList, Scanner consoleInput) {
@@ -71,7 +72,7 @@ public class Main {
             break;
         }
         memberList.remove(ID);
-        System.out.println("Member removed successfully\n");
+        System.out.println("Member removed successfully");
     }
 
     public static void printUserList(HashMap memberList) {
