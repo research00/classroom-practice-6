@@ -4,7 +4,7 @@
 import java.util.HashMap;
 import java.util.Scanner;
 
-public class Main {
+public class ClassPractice {
     public static void main(String[] args) {
         HashMap<String, Member> memberList = new HashMap<String, Member>();
         Scanner consoleInput = new Scanner(System.in);
